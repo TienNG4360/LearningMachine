@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression Deployment</title>
+</head>
+<body>
+    <h1>Linear Regression Model</h1>
+    <label for="input_feature">Input Feature:</label>
+    <input type="number" id="input_feature" step="any" placeholder="Enter a value">
+    <button onclick="predict()">Predict</button>
+    <p id="prediction_result"></p>
+
+    <script src="linear_regr_model.js"></script>
+    <script>
+        function predict() {
+            var inputValue = document.getElementById("input_feature").value;
+            var prediction = predictLinearRegr(inputValue);
+            document.getElementById("prediction_result").innerHTML = "Prediction: " + prediction;
+        }
+    </script>
+</body>
+</html>
